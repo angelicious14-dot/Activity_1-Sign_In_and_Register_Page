@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In and Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="logo">Create Account</div>
+    <h2 id="formTitle">Sign In</h2>
+    <p class="subtitle">Welcome! Please enter your details.</p>
+
+    <form action="login.php" method="POST" id="loginForm">
+
+        <label>Username</label>
+        <input type="text" name="username"
+               placeholder="Enter your username" required>
+
+        <label>Password</label>
+        <input type="password" name="password"
+               placeholder="Enter your password" required>
+
+        <button type="submit">Sign In</button>
+
+        <p class="switch">
+            Don't have an account?
+            <a href="#" id="showRegister">Register</a>
+        </p>
+    </form>
+
+    <form action="register.php" method="POST"
+          id="registerForm" class="hidden">
+
+        <label>Full Name</label>
+        <input type="text" name="fullname"
+               placeholder="Enter your full name" required>
+
+        <label>Email</label>
+        <input type="email" name="email"
+               placeholder="Enter your email" required>
+
+        <label>Username</label>
+        <input type="text" name="username"
+               placeholder="Create username" required>
+
+        <label>Password</label>
+        <input type="password" name="password"
+               placeholder="Create password"
+               minlength="8" required>
+
+        <label>Confirm Password</label>
+        <input type="password" name="confirm_password"
+               placeholder="Confirm password"
+               minlength="8" required>
+
+        <button type="submit">Create Account</button>
+
+        <p class="switch">
+            Already have an account?
+            <a href="#" id="showLogin">Sign In</a>
+        </p>
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
